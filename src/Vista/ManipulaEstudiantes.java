@@ -6,6 +6,8 @@
 package Vista;
 
 import Controlador.Controlador_Mantenimiento_Estudiante;
+import javax.swing.JTextField;
+import Modelo.ArrayEstudiante;
 
 /**
  *
@@ -13,7 +15,7 @@ import Controlador.Controlador_Mantenimiento_Estudiante;
  */
 public class ManipulaEstudiantes extends javax.swing.JFrame {
 
-    private Controlador_Mantenimiento_Estudiante cme;
+     private Controlador_Mantenimiento_Estudiante cme;
     /**
      * Creates new form ManipulaEstudiantes
      */
@@ -21,6 +23,7 @@ public class ManipulaEstudiantes extends javax.swing.JFrame {
         initComponents();
         cme = new Controlador_Mantenimiento_Estudiante(this);
         this.gUI_Botones1.agregar_eventos(cme);
+       
     }
 
     /**
@@ -32,28 +35,16 @@ public class ManipulaEstudiantes extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        gUI_Botones1 = new Vista.GUI_Botones();
-        gUI_Botones3 = new Vista.GUI_Botones();
-        jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jtCarnet = new javax.swing.JTextField();
-        jtNombre = new javax.swing.JTextField();
-        jtCorreo = new javax.swing.JTextField();
+        jTCarnet = new javax.swing.JTextField();
+        jTNombre = new javax.swing.JTextField();
+        jTCorreo = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        gUI_Botones1 = new Vista.GUI_Botones();
 
-        javax.swing.GroupLayout gUI_Botones1Layout = new javax.swing.GroupLayout(gUI_Botones1);
-        gUI_Botones1.setLayout(gUI_Botones1Layout);
-        gUI_Botones1Layout.setHorizontalGroup(
-            gUI_Botones1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        gUI_Botones1Layout.setVerticalGroup(
-            gUI_Botones1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setText("Carnet");
 
@@ -61,115 +52,167 @@ public class ManipulaEstudiantes extends javax.swing.JFrame {
 
         jLabel3.setText("Correo");
 
-        jtCarnet.addActionListener(new java.awt.event.ActionListener() {
+        jTCarnet.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtCarnetActionPerformed(evt);
+                jTCarnetActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jtCarnet, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE)
-                        .addComponent(jtNombre, javax.swing.GroupLayout.Alignment.TRAILING)))
-                .addContainerGap(33, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jtCarnet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(33, 33, 33)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(32, 32, 32)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(38, Short.MAX_VALUE))
-        );
+        jTNombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTNombreActionPerformed(evt);
+            }
+        });
+
+        jLabel4.setFont(new java.awt.Font("Tempus Sans ITC", 0, 24)); // NOI18N
+        jLabel4.setText("ESTUDIANTES");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTNombre, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jTCarnet, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jTCorreo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(177, 177, 177))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(gUI_Botones3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(82, 82, 82)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(gUI_Botones1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(gUI_Botones3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(27, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jTCarnet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jTNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jTCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(gUI_Botones1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jtCarnetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtCarnetActionPerformed
+    private void jTCarnetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTCarnetActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jtCarnetActionPerformed
+    }//GEN-LAST:event_jTCarnetActionPerformed
+
+    private void jTNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTNombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTNombreActionPerformed
 
     /**
      * @param args the command line arguments
      */
+    //public int fuente(Object obj)
+    //{   
+    //    return this.gUI_Botones1.get_codigo_por_fuente(obj);
+    //}
     
 public int get_codigo_por_fuente(Object obj)
 {
     int dev = 0;
-        if(this.jtCarnet.equals(obj))
+        if(this.jTCarnet.equals(obj))
         {
             dev = Controlador_Mantenimiento_Estudiante.CARNET;
         }
-        else if(this.jtCorreo.equals(obj))
+        else if(this.jTCorreo.equals(obj))
         {
             dev = Controlador_Mantenimiento_Estudiante.CORREO;
         }
-         else if(this.jtNombre.equals(obj))
+         else if(this.jTNombre.equals(obj))
         {
             dev = Controlador_Mantenimiento_Estudiante.NOMBRE;
         }
          else
          {
-             dev = this.gUI_Botones1.get_codigo_por_fuente(obj);
+            dev = this.gUI_Botones1.get_codigo_por_fuente(obj);
          }
     return dev;
 }
+    
+    public String getJtCarnet() {
+        return this.jTCarnet.toString();
+    }
+
+    public void setJtCarnet(String jtCarnet){
+        this.jTCarnet.setText(jtCarnet);
+    }
+
+    public String getJtCorreo() {
+        return this.jTCorreo.toString();
+    }
+
+    public void setJtCorreo(String jtCorreo) {
+        this.jTCorreo.setText(jtCorreo);
+    }
+
+    public String getJtNombre() {
+        return this.jTNombre.toString();
+    }
+
+    public void setJtNombre(String jtNombre) {
+        this.jTNombre.setText(jtNombre);
+    }
+    
+    public boolean verificar()
+    {
+        if(this.jTCarnet.getText().equals("") || this.jTCorreo.getText().equals("") || this.jTNombre.getText().equals(""))
+        {
+            return true;
+        }
+        
+        return false;
+    }
+    
+    public boolean verificarCarnet()
+    {
+        if(this.jTCarnet.getText().equals("") )
+        {
+            return true;
+        }
+        
+        return false;
+    }
+    
+    public void limpiar()
+    {
+        this.jTCarnet.setText("");
+        this.jTNombre.setText("");
+        this.jTCorreo.setText("");
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private Vista.GUI_Botones gUI_Botones1;
-    private Vista.GUI_Botones gUI_Botones3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jtCarnet;
-    private javax.swing.JTextField jtCorreo;
-    private javax.swing.JTextField jtNombre;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JTextField jTCarnet;
+    private javax.swing.JTextField jTCorreo;
+    private javax.swing.JTextField jTNombre;
     // End of variables declaration//GEN-END:variables
 }

@@ -11,6 +11,9 @@ package Modelo;
  */
 public class Estudiante {
     private String carnet;
+    private String nombre;
+    private String correo;
+    private static String[] atributos = {"Correo", "Nombre", "Carnet"};
 
     public String getCarnet() {
         return carnet;
@@ -35,13 +38,16 @@ public class Estudiante {
     public void setCorreo(String correo) {
         this.correo = correo;
     }
-    private String nombre;
-    private String correo;
+    
 
     public Estudiante(String carnet, String nombre, String correo) {
         this.carnet = carnet;
         this.nombre = nombre;
         this.correo = correo;
+    }
+    
+    public static int getConteoAtributos(){
+       return  atributos.length;
     }
 
 }

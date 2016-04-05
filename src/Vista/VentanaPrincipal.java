@@ -39,6 +39,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         btn_Salir = new javax.swing.JMenuItem();
         ManipulEstud = new javax.swing.JMenu();
         jt_mani_estudiante = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -56,6 +58,17 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jt_mani_estudiante.setText("Manipular Estudiante");
         ManipulEstud.add(jt_mani_estudiante);
+
+        jMenuItem1.setText("Curso");
+        ManipulEstud.add(jMenuItem1);
+
+        jMenuItem2.setText("Matricula");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        ManipulEstud.add(jMenuItem2);
 
         menuPincipal.add(ManipulEstud);
 
@@ -79,6 +92,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        // TODO add your handling code here:
+    }
+            
     /**
      * @param args the command line arguments
      */
@@ -118,6 +139,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu ManipulEstud;
     private javax.swing.JMenuItem btn_Salir;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jt_mani_estudiante;
     private javax.swing.JMenuBar menuPincipal;
     private javax.swing.JMenu menuSalir;
